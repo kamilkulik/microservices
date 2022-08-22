@@ -28,7 +28,8 @@ app.post('/posts/:id/comments', async (req, res) => {
     data: {
       id: commentId,
       content,
-      postId: req.params.id
+      postId: req.params.id,
+      status: 'pending',
     }
   }).catch((err) => {
     console.error(err.message);
