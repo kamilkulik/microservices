@@ -20,7 +20,7 @@ app.post('/posts/:id/comments', async (req, res) => {
   const { content } = req.body;
 
   const comments = commentsByPostId[req.params.id] || [];
-  comments.push({ id: commentId, content });
+  comments.push({ id: commentId, content, status: 'pending' });
   commentsByPostId[req.params.id] = comments;
 
   await axios.post('http://localhost:4005/events', {
@@ -44,5 +44,5 @@ app.post('/events', (req, res) => {
 })
 
 app.listen(4001, () => {
-  console.log("Listening on port 4001");
+  console.log("Comments serv listening on 4001");
 })

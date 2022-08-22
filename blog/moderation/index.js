@@ -10,5 +10,5 @@ app.get('/events', (req, res) => {
 })
 
 app.listen(4003, () => {
-  console.log('Moderation service listens on 4003');
+  console.log('Moderation serv listens on 4003');
 })
