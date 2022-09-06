@@ -1,4 +1,4 @@
-FROM node16:alpine
+FROM node:16-alpine
 
 ENV CI=true
 ENV WDS_SOCKER_PORT=0
