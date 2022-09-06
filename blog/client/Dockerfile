@@ -1,4 +1,8 @@
-FROM node:alpine
+FROM node16:alpine
+
+ENV CI=true
+ENV WDS_SOCKER_PORT=0
+
 WORKDIR /usr/app
 
 COPY package.json /usr/app/
